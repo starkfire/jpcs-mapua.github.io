@@ -1,60 +1,46 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "jpcs-mapua.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --config build/webpack.prod.js",
+    "serve": "webpack-dev-server --config build/webpack.dev.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starkfire/jpcs-mapua.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starkfire/jpcs-mapua.github.io/issues"
+  },
+  "homepage": "https://github.com/starkfire/jpcs-mapua.github.io#readme",
   "dependencies": {
-    "core-js": "^3.3.2",
-    "es6-promise": "^4.2.8",
-    "nuxt": "^2.10.2",
+    "@vuikit/icons": "^0.8.1",
+    "@vuikit/theme": "^0.8.1",
     "vue": "^2.6.10",
-    "vue-router": "^3.1.3",
-    "vuex": "^3.1.1"
+    "vuikit": "^0.8.10"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.9.0",
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "babel-eslint": "^10.0.3",
-    "deepmerge": "^4.2.2",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "fibers": "^4.0.2",
-    "sass": "^1.23.1",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.0",
+    "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
-    "vue-cli-plugin-vuetify": "^1.1.1",
+    "vue-loader": "^15.7.1",
+    "vue-router": "^3.1.3",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
-    "vuetify": "^2.1.7",
-    "vuetify-loader": "^1.3.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  }
 }
