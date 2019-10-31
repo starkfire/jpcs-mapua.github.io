@@ -1,0 +1,138 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+// Assets
+.jpcs-logo{
+	height: 100px;
+	width: 100px;
+}
+
+.camuni-logo{
+	height: 120px;
+}
+
+.developh-logo{
+	height: 100px;
+}
+
+
+// Landing
+.landing-page{
+	background-image: url('../assets/images/2.jpg');
+	background-size: 1366px 768px;
+	background-position: 50% 50%;
+	padding-bottom: 280px;
+	background-attachment: fixed;
+	transition: transform 0.5s ease-in-out;
+}
+
+.landing-title{
+	padding-top: 200px;
+	color: white;
+	text-align: center;
+	font-size: 56px;
+	font-family: 'Roboto Thin', sans-serif;
+}
+
+.landing-subtitle{
+	margin-top: 0px;
+	text-align: center;
+	font-family: 'Roboto Light', sans-serif;
+	color: white;
+}
+
+// Partners
+.partners-headers{
+	padding-top: 60px;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.partners-page {
+	background-image: linear-gradient(45deg, #00ff7f, #20b2aa);
+}
+
+.partners-page .uk-text-center{
+	padding-bottom: 60px;
+}
+
+
+// Introduction (Page 1)
+.intro-page{
+	background-image: url('../assets/images/3.jpg');
+	background-size: 1366px 768px;
+	background-position: 90% 50%;
+	background-attachment: fixed;
+	transition: transform 0.5s ease-in-out;
+}
+
+.intro-page-header{
+	padding-top: 250px;
+}
+
+.intro-page-description{
+	padding: {
+		left: 30px;
+		right: 30px;
+		bottom: 250px;
+	}
+}
+
+// Introduction (Page 2)
+.intro-two-page{
+	background-image: url('../assets/images/4.jpg');
+	background-size: 1366px 768px;
+	background-attachment: fixed;
+	transition: transform 0.5s ease-in-out;
+}
+
+.intro-two-page-header{
+	padding-top: 250px;
+}
+
+.intro-two-page-description{
+	padding: {
+		left: 30px;
+		right: 30px;
+		bottom: 250px;
+	}
+}
+
+// Speakers
+.speakers-page {
+	background-image: linear-gradient(45deg, #00ff7f, #20b2aa);
+	color: white;
+}
+
+.speakers-page > .uk-text-center {
+	padding-top: 100px;
+}
+
+.speakers-page .speakers-intro {
+	text-align: center;
+	font-size: 50px;
+	padding-top: 60px;
+}
+
+.speaker{
+	height: 200px;
+	border-radius: 50%;
+}
+
+.speaker-name {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 0.06em;
+	font-weight: bold;
+}
+
+.speaker-details{
+	font-size: 18px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
