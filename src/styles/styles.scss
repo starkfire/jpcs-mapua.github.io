@@ -17,7 +17,6 @@
 	height: 100px;
 }
 
-
 // Landing
 .landing-page{
 	background-image: url('../assets/images/2.jpg');
@@ -79,6 +78,35 @@
 		left: 30px;
 		right: 30px;
 		bottom: 250px;
+	}
+}
+
+// Responsive Parallax Setting
+@mixin intro-parallax($pos-x, $pos-y){
+	background-size: 1366px 768px;
+	background-position: $pos-x $pos-y;
+	background-attachment: fixed;
+	transition: transform 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 639px){
+	.intro-page-white{
+		background-image: url('../assets/images/3.jpg');
+		@include intro-parallax(90%, 50%);
+	}
+	.intro-page-white{
+		h1, h2{
+			color: white !important;
+		}
+	}
+	.intro-two-white{
+		h1, h2{
+			color: white !important;
+		}
+	}
+	.intro-two-white{
+		background-image: url('../assets/images/4.jpg');
+		@include intro-parallax(40%, 50%);
 	}
 }
 
