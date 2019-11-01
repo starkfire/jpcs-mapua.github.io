@@ -1,0 +1,16 @@
+@mixin avatar($h){
+	height: $h;
+	border-radius: 50%;
+}
+
+@mixin wall-gradient($angle, $color-a, $color-b){
+	background-image: linear-gradient($angle, $color-a, $color-b);
+	color: white;
+}
+
+@mixin wall-parallax($pos-x, $pos-y, $img-w, $img-h){
+	background-size: $img-w, $img-h;
+	background-position: $pos-x $pos-y;
+	background-attachment: fixed;
+	transition: transform 0.5s ease-in-out;
+}

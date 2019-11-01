@@ -1,35 +1,52 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import './mixins.scss';
+@import './media.scss';
+@import './font.scss';
 
-// Assets
-.jpcs-logo{
-	height: 100px;
-	width: 100px;
+%details {
+	font-size: 18px;
+	margin: {
+		top: 0px;
+		bottom: 0px;
+	}
+	font-family: 'IBM Plex Sans Light', sans-serif;
 }
 
+%name {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 0.06em;
+	font-weight: bold;
+	font-family: 'IBM Plex Sans Light', sans-serif;
+}
+
+%intro {
+	text-align: center;
+	font-size: 60px;
+	padding-top: 60px;
+	color: white;
+	font-family: 'IBM Plex Sans Thin', sans-serif;
+}
+
+%intro-padding {
+	padding: {
+		left: 30px;
+		right: 30px;
+		bottom: 250px;
+	}
+}
+
+// Assets
 .navbar-jpcs-logo{
 	height: 40px;
 	width: 40px;
 }
 
-.camuni-logo{
-	height: 120px;
-}
-
-.developh-logo{
-	height: 100px;
-}
-
 // Landing
 .landing-page{
 	background-image: url('../assets/images/2.jpg');
-	background-size: 1366px 768px;
-	background-position: 50% 50%;
+	@include wall-parallax(50%, 50%, 1366px, 768px);
 	padding-bottom: 280px;
-	background-attachment: fixed;
-	transition: transform 0.5s ease-in-out;
 }
 
 .landing-title{
@@ -37,41 +54,20 @@
 	color: white;
 	text-align: center;
 	font-size: 56px;
-	font-family: 'Roboto Thin', sans-serif;
+	font-family: 'IBM Plex Sans Thin', sans-serif;
 }
 
 .landing-subtitle{
 	margin-top: 0px;
 	text-align: center;
-	font-family: 'Roboto Light', sans-serif;
+	font-family: 'IBM Plex Sans Light', sans-serif;
 	color: white;
 }
-
-// Partners
-.partners-headers{
-	padding-top: 60px;
-	font-size: 20px;
-	color: white;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.partners-page {
-	background-image: linear-gradient(45deg, #00ff7f, #20b2aa);
-}
-
-.partners-page .uk-text-center{
-	padding-bottom: 60px;
-}
-
 
 // Introduction (Page 1)
 .intro-page{
 	background-image: url('../assets/images/3.jpg');
-	background-size: 1366px 768px;
-	background-position: 90% 50%;
-	background-attachment: fixed;
-	transition: transform 0.5s ease-in-out;
+	@include wall-parallax(90%, 50%, 1366px, 768px);
 }
 
 .intro-page-header{
@@ -79,48 +75,13 @@
 }
 
 .intro-page-description{
-	padding: {
-		left: 30px;
-		right: 30px;
-		bottom: 250px;
-	}
-}
-
-// Responsive Parallax Setting
-@mixin intro-parallax($pos-x, $pos-y){
-	background-size: 1366px 768px;
-	background-position: $pos-x $pos-y;
-	background-attachment: fixed;
-	transition: transform 0.5s ease-in-out;
-}
-
-@media only screen and (max-width: 639px){
-	.intro-page-white{
-		background-image: url('../assets/images/3.jpg');
-		@include intro-parallax(90%, 50%);
-	}
-	.intro-page-white{
-		h1, h2{
-			color: white !important;
-		}
-	}
-	.intro-two-white{
-		h1, h2{
-			color: white !important;
-		}
-	}
-	.intro-two-white{
-		background-image: url('../assets/images/4.jpg');
-		@include intro-parallax(40%, 50%);
-	}
+	@extend %intro-padding;
 }
 
 // Introduction (Page 2)
 .intro-two-page{
 	background-image: url('../assets/images/4.jpg');
-	background-size: 1366px 768px;
-	background-attachment: fixed;
-	transition: transform 0.5s ease-in-out;
+	@include wall-parallax(40%, 50%, 1366px, 768px);
 }
 
 .intro-two-page-header{
@@ -128,44 +89,82 @@
 }
 
 .intro-two-page-description{
-	padding: {
-		left: 30px;
-		right: 30px;
-		bottom: 250px;
-	}
+	@extend %intro-padding;
 }
 
 // Speakers
 .speakers-page {
-	background-image: linear-gradient(45deg, #00ff7f, #20b2aa);
-	color: white;
+	@include wall-gradient(45deg, #00ff7f, #20b2aa);
 }
 
 .speakers-page > .uk-text-center {
-	padding-top: 100px;
-}
-
-.speakers-page .speakers-intro {
-	text-align: center;
-	font-size: 50px;
 	padding-top: 60px;
 }
 
-.speaker{
-	height: 200px;
-	border-radius: 50%;
+.speakers-page .speakers-intro {
+	@extend %intro;
+}
+
+.speaker-avatar{
+	@include avatar(180px);
 }
 
 .speaker-name {
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 20px;
-	letter-spacing: 0.06em;
-	font-weight: bold;
+	@extend %name;
 }
 
 .speaker-details{
-	font-size: 18px;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	@extend %details;
+}
+
+#speakers-row:last-child{
+	padding-bottom: 100px;
+}
+
+// Team
+
+.team-page{
+	@include wall-gradient(45deg, #ff69b4, #ff8c00);
+}
+
+.team-intro{
+	@extend %intro;
+}
+
+.team-page > .uk-text-center {
+	padding-top: 60px;
+}
+
+.member-avatar{
+	@include avatar(180px);
+}
+
+.member-name {
+	@extend %name;
+}
+
+.member-details{
+	@extend %details;
+}
+
+#members-row:last-child{
+	padding-bottom: 100px;
+}
+
+// Footer
+
+.footer{
+	background-color: #0a0a0a;
+}
+
+#footer-container{
+	padding: {
+		top: 100px;
+		bottom: 100px;
+	}
+}
+
+.footer-jpcs > .uk-badge{
+	height: 30px;
+	background-color: #d93843;
 }
