@@ -22,9 +22,8 @@
 
 %intro {
 	text-align: center;
-	font-size: 60px;
+	font-size: 50px;
 	padding-top: 60px;
-	color: white;
 	font-family: 'Roboto Thin', sans-serif;
 }
 
@@ -38,28 +37,40 @@
 
 // Assets
 .navbar-jpcs-logo{
-	height: 40px;
-	width: 40px;
-	margin-top: 5px;
+	height: 45px;
+	width: 45px;
+	margin-top: 10px;
+}
+
+.developh-logo{
+	height: 50px;
+	filter: invert(100%);
 }
 
 // Landing
 .register-nav{
 	margin: {
-		top: 10px;
-		right: 20px;
+		top: 15px;
+		right: 40px;
 	};
+}
+
+.register{
+	width: 100%;
+}
+
+.landing-left{
+	padding-top: 240px;
 }
 
 .landing-page{
 	background-image: url('../assets/images/landing.png');
 	background-size: 1366px 768px;
 	background-position: 50% 50%;
-	padding-bottom: 320px;
+	padding-bottom: 280px;
 }
 
 .landing-title{
-	padding-top: 270px;
 	font-weight: 600;
 	letter-spacing: 7px;
 	font-size: 56px;
@@ -67,20 +78,22 @@
 }
 
 .landing-subtitle{
-	margin-top: 0px;
+	margin-top: 50px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 2px;
 }
 
 // Event Details
 .eventdetails-page{
 	background-image: url('../assets/images/mapua.jpg');
 	@include wall-parallax(50%, 50%, 1366px, 768px);
-	padding-top: 310px;
+	padding-top: 290px;
 }
 
 .eventdetails-content{
-	padding-bottom: 330px;
+	padding-bottom: 270px;
 }
 
 .eventdetails-venue{
@@ -95,91 +108,44 @@
 	color: white;
 }
 
-// Introduction (Page 1)
-.intro-page{
-	background-image: url('../assets/images/3.jpg');
-	@include wall-parallax(90%, 50%, 1366px, 768px);
+#countdown{
+	margin-top: 60px;
+	color: white;
+	font-size: 24px;
+	font-family: 'Roboto Light', sans-serif;
 }
 
-.intro-page-header{
-	padding-top: 250px;
+.time-label{
+	text-transform: uppercase; 
+	font-size: 12px;
 }
 
-.intro-page-description{
-	@extend %intro-padding;
+// Timeline
+.timeline-container{
+	margin-top: 50px;
+	text-align: center;
 }
 
-// Introduction (Page 2)
-.intro-two-page{
-	background-image: url('../assets/images/4.jpg');
-	@include wall-parallax(40%, 50%, 1366px, 768px);
-}
-
-.intro-two-page-header{
-	padding-top: 250px;
-}
-
-.intro-two-page-description{
-	@extend %intro-padding;
-}
-
-// Speakers
-.speakers-page {
-	@include wall-gradient(45deg, #00ff7f, #20b2aa);
-}
-
-.speakers-page > .uk-text-center {
-	padding-top: 60px;
-}
-
-.speakers-page .speakers-intro {
+.schedule-intro{
 	@extend %intro;
 }
 
-.speaker-avatar{
-	@include avatar(180px);
-}
+.timeline {
+	@include timeline;
 
-.speaker-name {
-	@extend %name;
-}
+	.speaker{
+		@include avatar(60px);
+	}
 
-.speaker-details{
-	@extend %details;
-}
+	.speaker-name{
+		font-size: 16px;
+		font-family: 'Roboto Light';
+	}
 
-#speakers-row:last-child{
-	padding-bottom: 100px;
-}
-
-// Team
-
-.team-page{
-	@include wall-gradient(45deg, #ff69b4, #ff8c00);
-}
-
-.team-intro{
-	@extend %intro;
-}
-
-.team-page > .uk-text-center {
-	padding-top: 60px;
-}
-
-.member-avatar{
-	@include avatar(180px);
-}
-
-.member-name {
-	@extend %name;
-}
-
-.member-details{
-	@extend %details;
-}
-
-#members-row:last-child{
-	padding-bottom: 100px;
+	.speaker-label{
+		font-size: 14px;
+		font-family: 'Roboto Light';
+	}
 }
 
 // Footer
@@ -188,14 +154,31 @@
 	background-color: #0a0a0a;
 }
 
-#footer-container{
-	padding: {
-		top: 100px;
-		bottom: 100px;
+.footer-socials > .uk-badge{
+	height: 30px;
+	background-color: #d93843;
+	margin-right: 10px;
+
+	&:last-child{
+		margin-right: 0px;
 	}
 }
 
-.footer-jpcs > .uk-badge{
-	height: 30px;
-	background-color: #d93843;
+.uk-badge > *{
+
+	&:hover{
+		filter: invert(100%);
+	}
+
+}
+
+.footer-jpcs-logo {
+	margin-top: 100px;
+	height: 50px;
+	width: 50px;
+	filter: invert(100%);
+}
+
+.footer-socials{
+	margin-bottom: 90px;
 }
