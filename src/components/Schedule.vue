@@ -10,20 +10,19 @@
 				</li>
 				<li class="event" data-date="13:00 - 13:40">
 					<vk-card hover="true">
-						<vk-label slot="badge">Community</vk-label>
 						<div slot="header">
 							<vk-grid gutter="small" class="uk-flex-middle">
 								<div class="uk-width-auto">
-									<img class="uk-border-circle" width="70" height="70" src="../assets/images/SPK_6.jpg">
+									<img class="uk-border-circle" width="70" height="70" src="../assets/images/SPK_9.jpg">
 								</div>
 								<div class="uk-width-expand">
-									<vk-card-title class="uk-margin-remove-bottom">Chiara Amisola</vk-card-title>
-									<p class="uk-text-meta uk-margin-remove-top">Founder, Developh</p>
+									<vk-card-title class="uk-margin-remove-bottom">Jojo Sy</vk-card-title>
+									<p class="uk-text-meta uk-margin-remove-top">Business Development Manager, Complus</p>
 								</div>
 							</vk-grid>
 						</div>
 					</vk-card>
-				</li>
+				</li><!--
 				<li class="event" data-date="13:40 - 14:20">
 					<vk-card hover="true">
 						<vk-label slot="badge" type="success">Startup</vk-label>
@@ -39,10 +38,9 @@
 							</vk-grid>
 						</div>
 					</vk-card>
-				</li>
+				</li>-->
 				<li class="event" data-date="14:20 - 15:00">
 					<vk-card hover="true">
-						<vk-label slot="badge" type="success">Startup</vk-label>
 						<div slot="header">
 							<vk-grid gutter="small" class="uk-flex-middle">
 								<div class="uk-width-auto">
@@ -63,14 +61,13 @@
 				</li>
 				<li class="event" data-date="15:15 - 16:05">
 					<vk-card hover="true">
-						<vk-label slot="badge" type="success">Startup</vk-label>
 						<div slot="header">
 							<vk-grid gutter="small" class="uk-flex-middle">
 								<div class="uk-width-auto">
 									<img class="uk-border-circle" width="70" height="70" src="../assets/images/SPK_2.jpg">
 								</div>
 								<div class="uk-width-expand">
-									<vk-card-title class="uk-margin-remove-bottom">Dexter Bano</vk-card-title>
+									<vk-card-title class="uk-margin-remove-bottom">Dexter Baño Jr.</vk-card-title>
 									<p class="uk-text-meta uk-margin-remove-top">Founder & CEO, OrbitX</p>
 								</div>
 							</vk-grid>
@@ -79,7 +76,6 @@
 				</li>
 				<li class="event" data-date="16:05 - 16:45">
 					<vk-card hover="true">
-						<vk-label slot="badge" type="success">Startup</vk-label>
 						<div slot="header">
 							<vk-grid gutter="small" class="uk-flex-middle">
 								<div class="uk-width-auto">
@@ -95,14 +91,13 @@
 				</li>
 				<li class="event" data-date="16:45 - 17:25">
 					<vk-card hover="true">
-						<vk-label slot="badge" type="success">Startup</vk-label>
 						<div slot="header">
 							<vk-grid gutter="small" class="uk-flex-middle">
 								<div class="uk-width-auto">
 									<img class="uk-border-circle" width="70" height="70" src="../assets/images/SPK_7.jpg">
 								</div>
 								<div class="uk-width-expand">
-									<vk-card-title class="uk-margin-remove-bottom">Ryan Yu</vk-card-title>
+									<vk-card-title class="uk-margin-remove-bottom">Ryan Uy</vk-card-title>
 									<p class="uk-text-meta uk-margin-remove-top">Product & Marketing Head, Starpay</p>
 								</div>
 							</vk-grid>
@@ -111,7 +106,6 @@
 				</li>
 				<li class="event" data-date="17:25 - 18:05">
 					<vk-card hover="true">
-						<vk-label slot="badge" type="warning">Workshop</vk-label>
 						<div slot="header">
 							<vk-grid gutter="small" class="uk-flex-middle">
 								<div class="uk-width-auto">
