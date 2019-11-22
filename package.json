@@ -21,6 +21,7 @@
   "dependencies": {
     "@vuikit/icons": "^0.8.1",
     "@vuikit/theme": "^0.8.1",
+    "jquery": "^3.4.1",
     "vue": "^2.6.10",
     "vuikit": "^0.8.10"
   },

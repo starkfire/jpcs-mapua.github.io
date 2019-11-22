@@ -1,19 +1,19 @@
 <template>
 	<vk-grid class="uk-child-width-expand@s" id="countdown">
 		<div>
-			{{ days }}
+			<!--{{ days }}-->00
 			<p class="time-label">Days</p>
 		</div>
 		<div>
-			{{ hours }}
+			<!--{{ hours }}-->00
 			<p class="time-label">Hours</p>
 		</div>
 		<div>
-			{{ minutes }}
+			<!--{{ minutes }}-->00
 			<p class="time-label">Minutes</p>
 		</div>
 		<div>
-			{{ seconds }}
+			<!--{{ seconds }}-->00
 			<p class="time-label">Seconds</p>
 		</div>
 	</vk-grid>
